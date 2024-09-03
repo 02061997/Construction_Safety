@@ -10,27 +10,38 @@
             margin: 20px;
             padding: 0;
         }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 2px solid #000;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
         .section {
-            margin-bottom: 40px;
+            flex: 1;
+            margin: 10px;
         }
         .section h2 {
             font-size: 1.5em;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
-        .video-thumbnail, .gif-container, .pdf-link, .survey-form {
-            display: inline-block;
-            width: 48%;
-            vertical-align: top;
-            margin: 1%;
+        .section .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section .content img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
         }
         .pdf-link, .survey-form {
             text-align: center;
+            margin-bottom: 20px;
         }
         .pdf-link a, .survey-form a {
             display: inline-block;
@@ -39,69 +50,55 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            margin-bottom: 10px;
         }
         .pdf-link a:hover, .survey-form a:hover {
             background-color: #0056b3;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ccc;
-        }
     </style>
 </head>
 <body>
+    <h1>Construction Safety Project</h1>
+
     <div class="container">
-        <h1>Construction Safety Project</h1>
+        <!-- Reading Section -->
+        <div class="section reading-section">
+            <h2>Reading</h2>
+            <div class="content">
+                <div class="pdf-link">
+                    <a href="https://link_to_pdf.com">PDF Link</a>
+                </div>
+                <div class="survey-form">
+                    <a href="https://link_to_survey1.com">1. Reading Survey</a>
+                </div>
+            </div>
+        </div>
 
         <!-- Video Section -->
         <div class="section video-section">
             <h2>Video</h2>
-            <div class="video-thumbnail">
+            <div class="content">
                 <img src="thumbnail.jpg" alt="Video Thumbnail">
                 <p><a href="https://link_to_video.com">Link to Video</a></p>
-            </div>
-            <div class="video-thumbnail">
                 <img src="thumbnail2.jpg" alt="Video Thumbnail">
                 <p><a href="https://link_to_second_video.com">Link to Second Video</a></p>
+                <div class="survey-form">
+                    <a href="https://link_to_survey2.com">2. Video Survey</a>
+                </div>
             </div>
         </div>
 
-        <!-- GIF Section -->
-        <div class="section gif-section">
-            <h2>GIF</h2>
-            <div class="gif-container">
+        <!-- Augmented Section -->
+        <div class="section augmented-section">
+            <h2>Augmented</h2>
+            <div class="content">
                 <img src="gif_image.gif" alt="GIF Image">
-            </div>
-        </div>
-
-        <!-- PDF Link Section -->
-        <div class="section pdf-link-section">
-            <h2>Reading</h2>
-            <div class="pdf-link">
-                <a href="https://link_to_pdf.com">PDF Link</a>
-            </div>
-        </div>
-
-        <!-- Survey Forms Section -->
-        <div class="section survey-section">
-            <h2>Surveys</h2>
-            <div class="survey-form">
-                <a href="https://link_to_survey1.com">1. Reading Survey</a>
-            </div>
-            <div class="survey-form">
-                <a href="https://link_to_survey2.com">2. Video Survey</a>
-            </div>
-            <div class="survey-form">
-                <a href="https://link_to_survey3.com">3. Augmented Survey</a>
-            </div>
-        </div>
-
-        <!-- AR Link Section -->
-        <div class="section ar-link-section">
-            <h2>AR</h2>
-            <div class="pdf-link">
-                <a href="https://link_to_ar_drive.com">Link to Drive</a>
+                <div class="pdf-link">
+                    <a href="https://link_to_ar_drive.com">Link to Drive</a>
+                </div>
+                <div class="survey-form">
+                    <a href="https://link_to_survey3.com">3. Augmented Survey</a>
+                </div>
             </div>
         </div>
     </div>
