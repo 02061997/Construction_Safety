@@ -26,30 +26,31 @@
             margin: 10px;
             text-align: center;
         }
-        .section h2 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-        .content img {
+        .section img {
             max-width: 100%;
             height: auto;
             border: 1px solid #ccc;
             margin-bottom: 10px;
         }
-        .pdf-link, .survey-form {
+        .section h2 {
+            font-size: 1.5em;
             margin-bottom: 20px;
         }
-        .pdf-link a, .survey-form a {
+        .pdf-link a, .survey-form a, .apk-link a {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 15px 25px;
             background-color: #007bff;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            margin-bottom: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
-        .pdf-link a:hover, .survey-form a:hover {
+        .pdf-link a:hover, .survey-form a:hover, .apk-link a:hover {
             background-color: #0056b3;
+        }
+        .section .content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -59,41 +60,42 @@
     <div class="container">
         <!-- Reading Section -->
         <div class="section reading-section">
+            <img src="reading_worker.jpg" alt="A construction worker reading the safety manual">
             <h2>Reading</h2>
             <div class="content">
+                <img src="pdf_front_page.jpg" alt="PDF Front Page">
                 <div class="pdf-link">
-                    <a href="https://link_to_pdf.com">PDF Link</a>
+                    <a href="https://link_to_pdf.com" target="_blank">Download PDF</a>
                 </div>
                 <div class="survey-form">
-                    <a href="https://link_to_survey1.com">1. Reading Survey</a>
+                    <a href="https://link_to_survey1.com" target="_blank" style="background-color: #28a745;">Reading Survey</a>
                 </div>
             </div>
         </div>
 
         <!-- Video Section -->
         <div class="section video-section">
+            <img src="video_worker.gif" alt="A construction worker watching a safety video">
             <h2>Video</h2>
             <div class="content">
-                <img src="thumbnail.jpg" alt="Video Thumbnail">
-                <p><a href="https://link_to_video.com">Link to Video</a></p>
-                <img src="thumbnail2.jpg" alt="Video Thumbnail">
-                <p><a href="https://link_to_second_video.com">Link to Second Video</a></p>
+                <img src="video_thumbnail.jpg" alt="Video Thumbnail">
+                <p><a href="https://link_to_video.com" target="_blank">Watch Video</a></p>
                 <div class="survey-form">
-                    <a href="https://link_to_survey2.com">2. Video Survey</a>
+                    <a href="https://link_to_survey2.com" target="_blank" style="background-color: #ffc107;">Video Survey</a>
                 </div>
             </div>
         </div>
 
-        <!-- Augmented Section -->
-        <div class="section augmented-section">
-            <h2>Augmented</h2>
+        <!-- Augmented Reality Section -->
+        <div class="section ar-section">
+            <img src="ar_worker.gif" alt="A construction worker getting hit in AR">
+            <h2>Augmented Reality</h2>
             <div class="content">
-                <img src="gif_image.gif" alt="GIF Image">
-                <div class="pdf-link">
-                    <a href="https://link_to_ar_drive.com">Link to Drive</a>
+                <div class="apk-link">
+                    <a href="https://link_to_apk.com" target="_blank">Download APK File</a>
                 </div>
                 <div class="survey-form">
-                    <a href="https://link_to_survey3.com">3. Augmented Survey</a>
+                    <a href="https://link_to_survey3.com" target="_blank" style="background-color: #17a2b8;">AR Survey</a>
                 </div>
             </div>
         </div>
