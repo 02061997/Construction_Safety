@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,21 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            margin: 20px;
+            margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.5s ease-in-out;
         }
+
         h1 {
             text-align: center;
             font-size: 2.5em;
-            margin-bottom: 40px;
+            margin: 40px 0;
             color: #333;
+            animation: fadeInDown 1s ease;
         }
+
         .container {
             display: flex;
             justify-content: space-between;
@@ -25,7 +31,10 @@
             flex-wrap: wrap;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 15px;
+            animation: fadeIn 1s ease;
         }
+
         .section {
             flex: 1;
             margin: 15px;
@@ -35,69 +44,140 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(255, 193, 7, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .section:hover::before {
+            opacity: 1;
+        }
+
         .section:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
         .section img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             margin-bottom: 15px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .section img:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
         .section h2 {
             font-size: 1.8em;
             margin-bottom: 20px;
             color: #007bff;
+            position: relative;
+            z-index: 2;
         }
-        .pdf-link a, .survey-form a, .apk-link a, .video-link a {
+
+        .pdf-link a,
+        .survey-form a,
+        .apk-link a,
+        .video-link a {
             display: inline-block;
             padding: 15px 25px;
-            background-color: #007bff;
-            color: white;
             text-decoration: none;
             border-radius: 50px;
-            margin-bottom: 20px;
             font-size: 1.1em;
+            color: white;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 2;
         }
-        .pdf-link a:hover, .survey-form a:hover, .apk-link a:hover, .video-link a:hover {
-            background-color: #0056b3;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+
         .pdf-link a {
             background-color: #28a745;
         }
+
         .survey-form a {
             background-color: #ffc107;
+            color: #333;
         }
+
         .apk-link a {
             background-color: #17a2b8;
         }
+
+        .pdf-link a:hover,
+        .survey-form a:hover,
+        .apk-link a:hover,
+        .video-link a:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
         .section .content p {
             font-size: 1.2em;
             margin-bottom: 20px;
             color: #555;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
+
 <body>
     <h1>Construction Safety Project</h1>
 
     <div class="container">
-        <!-- Reading Section -->
         <div class="section reading-section">
             <img src="assets/reading_worker.jpg" alt="A construction worker reading the safety manual">
             <h2>Reading</h2>
             <div class="content">
                 <img src="assets/construction-safety-manual.jpg" alt="PDF Front Page">
                 <div class="pdf-link">
-                    <a href="https://safetyresourcesblog.wordpress.com/wp-content/uploads/2014/09/construction-safety-manual.pdf" target="_blank">View PDF</a>
+                    <a href="https://safetyresourcesblog.wordpress.com/wp-content/uploads/2014/09/construction-safety-manual.pdf"
+                        target="_blank">View PDF</a>
                 </div>
                 <div class="survey-form">
                     <a href="https://link_to_survey1.com" target="_blank">Reading Survey</a>
@@ -105,13 +185,10 @@
             </div>
         </div>
 
-        <!-- Video Section -->
-        <!-- Video Section -->
         <div class="section video-section">
             <img src="assets/video_worker.jpg" alt="A construction worker watching a safety video">
             <h2>Video</h2>
             <div class="content">
-                <!-- Video Thumbnail and Embedded Video -->
                 <video width="320" height="240" controls>
                     <source src="assets/safety_video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -122,14 +199,10 @@
             </div>
         </div>
 
-
-        <!-- Augmented Reality Section -->
-<!-- Augmented Reality Section -->
         <div class="section ar-section">
             <img src="assets/ar_worker.jpg" alt="A construction worker getting hit in AR">
             <h2>Augmented Reality</h2>
             <div class="content">
-                <!-- Embedded AR Video -->
                 <video width="320" height="240" controls>
                     <source src="assets/ar_video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -145,4 +218,5 @@
 
     </div>
 </body>
+
 </html>
