@@ -36,7 +36,7 @@
             font-size: 1.5em;
             margin-bottom: 20px;
         }
-        .pdf-link a, .survey-form a, .apk-link a {
+        .pdf-link a, .survey-form a, .apk-link a, .video-link a {
             display: inline-block;
             padding: 15px 25px;
             background-color: #007bff;
@@ -45,7 +45,11 @@
             border-radius: 10px;
             margin-bottom: 20px;
         }
-        .pdf-link a:hover, .survey-form a:hover, .apk-link a:hover {
+        .video-link a {
+            border: 2px solid #007bff;
+            padding: 10px 20px;
+        }
+        .pdf-link a:hover, .survey-form a:hover, .apk-link a:hover, .video-link a:hover {
             background-color: #0056b3;
         }
         .section .content p {
@@ -79,7 +83,9 @@
             <h2>Video</h2>
             <div class="content">
                 <img src="video_thumbnail.jpg" alt="Video Thumbnail">
-                <p><a href="https://link_to_video.com" target="_blank">Watch Video</a></p>
+                <div class="video-link">
+                    <a href="https://link_to_video.com" target="_blank">Watch Video</a>
+                </div>
                 <div class="survey-form">
                     <a href="https://link_to_survey2.com" target="_blank" style="background-color: #ffc107;">Video Survey</a>
                 </div>
@@ -91,6 +97,7 @@
             <img src="ar_worker.gif" alt="A construction worker getting hit in AR">
             <h2>Augmented Reality</h2>
             <div class="content">
+                <img src="ar_example.gif" alt="Augmented Reality GIF">
                 <div class="apk-link">
                     <a href="https://link_to_apk.com" target="_blank">Download APK File</a>
                 </div>
