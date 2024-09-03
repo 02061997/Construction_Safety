@@ -4,37 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construction Safety Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 20px;
             padding: 0;
+            background-color: #f4f4f4;
         }
         h1 {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 40px;
+            color: #333;
         }
         .container {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .section {
             flex: 1;
-            margin: 10px;
+            margin: 15px;
+            padding: 20px;
             text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .section img {
             max-width: 100%;
             height: auto;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        .section img:hover {
+            transform: scale(1.05);
         }
         .section h2 {
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin-bottom: 20px;
+            color: #007bff;
         }
         .pdf-link a, .survey-form a, .apk-link a, .video-link a {
             display: inline-block;
@@ -42,19 +61,28 @@
             background-color: #007bff;
             color: white;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 50px;
             margin-bottom: 20px;
-        }
-        .video-link a {
-            border: 2px solid #007bff;
-            padding: 10px 20px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
         .pdf-link a:hover, .survey-form a:hover, .apk-link a:hover, .video-link a:hover {
             background-color: #0056b3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .pdf-link a {
+            background-color: #28a745;
+        }
+        .survey-form a {
+            background-color: #ffc107;
+        }
+        .apk-link a {
+            background-color: #17a2b8;
         }
         .section .content p {
             font-size: 1.2em;
             margin-bottom: 20px;
+            color: #555;
         }
     </style>
 </head>
@@ -72,7 +100,7 @@
                     <a href="https://link_to_pdf.com" target="_blank">Download PDF</a>
                 </div>
                 <div class="survey-form">
-                    <a href="https://link_to_survey1.com" target="_blank" style="background-color: #28a745;">Reading Survey</a>
+                    <a href="https://link_to_survey1.com" target="_blank">Reading Survey</a>
                 </div>
             </div>
         </div>
@@ -87,7 +115,7 @@
                     <a href="https://link_to_video.com" target="_blank">Watch Video</a>
                 </div>
                 <div class="survey-form">
-                    <a href="https://link_to_survey2.com" target="_blank" style="background-color: #ffc107;">Video Survey</a>
+                    <a href="https://link_to_survey2.com" target="_blank">Video Survey</a>
                 </div>
             </div>
         </div>
@@ -102,7 +130,7 @@
                     <a href="https://link_to_apk.com" target="_blank">Download APK File</a>
                 </div>
                 <div class="survey-form">
-                    <a href="https://link_to_survey3.com" target="_blank" style="background-color: #17a2b8;">AR Survey</a>
+                    <a href="https://link_to_survey3.com" target="_blank">AR Survey</a>
                 </div>
             </div>
         </div>
