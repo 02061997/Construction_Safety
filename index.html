@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,44 @@
             margin: 20px;
             padding: 0;
             background-color: #f4f4f4;
+            animation: backgroundAnimation 10s infinite alternate;
         }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-color: #f4f4f4;
+            }
+
+            50% {
+                background-color: #f0f8ff;
+            }
+
+            100% {
+                background-color: #f4f4f4;
+            }
+        }
+
         h1 {
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 40px;
             color: #333;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: textGradient 3s ease-in-out infinite;
         }
+
+        @keyframes textGradient {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 100%;
+            }
+        }
+
         .container {
             display: flex;
             justify-content: space-between;
@@ -26,6 +58,7 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .section {
             flex: 1;
             margin: 15px;
@@ -34,12 +67,19 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 5px solid;
+            border-image-slice: 1;
+            border-width: 5px;
+            border-image-source: linear-gradient(to right, #ff416c, #ff4b2b);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-image-source 2s;
         }
+
         .section:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-image-source: linear-gradient(to right, #2193b0, #6dd5ed);
         }
+
         .section img {
             max-width: 100%;
             height: auto;
@@ -47,15 +87,21 @@
             margin-bottom: 15px;
             transition: transform 0.3s ease;
         }
+
         .section img:hover {
             transform: scale(1.05);
         }
+
         .section h2 {
             font-size: 1.8em;
             margin-bottom: 20px;
             color: #007bff;
         }
-        .pdf-link a, .survey-form a, .apk-link a, .video-link a {
+
+        .pdf-link a,
+        .survey-form a,
+        .apk-link a,
+        .video-link a {
             display: inline-block;
             padding: 15px 25px;
             background-color: #007bff;
@@ -66,19 +112,27 @@
             font-size: 1.1em;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
-        .pdf-link a:hover, .survey-form a:hover, .apk-link a:hover, .video-link a:hover {
+
+        .pdf-link a:hover,
+        .survey-form a:hover,
+        .apk-link a:hover,
+        .video-link a:hover {
             background-color: #0056b3;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .pdf-link a {
             background-color: #28a745;
         }
+
         .survey-form a {
             background-color: #ffc107;
         }
+
         .apk-link a {
             background-color: #17a2b8;
         }
+
         .section .content p {
             font-size: 1.2em;
             margin-bottom: 20px;
@@ -86,6 +140,7 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Construction Safety Project</h1>
 
@@ -106,12 +161,10 @@
         </div>
 
         <!-- Video Section -->
-        <!-- Video Section -->
         <div class="section video-section">
             <img src="assets/video_worker.jpg" alt="A construction worker watching a safety video">
             <h2>Video</h2>
             <div class="content">
-                <!-- Video Thumbnail and Embedded Video -->
                 <video width="320" height="240" controls>
                     <source src="assets/safety_video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -122,14 +175,11 @@
             </div>
         </div>
 
-
         <!-- Augmented Reality Section -->
-<!-- Augmented Reality Section -->
         <div class="section ar-section">
             <img src="assets/ar_worker.jpg" alt="A construction worker getting hit in AR">
             <h2>Augmented Reality</h2>
             <div class="content">
-                <!-- Embedded AR Video -->
                 <video width="320" height="240" controls>
                     <source src="assets/ar_video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -145,4 +195,5 @@
 
     </div>
 </body>
+
 </html>
