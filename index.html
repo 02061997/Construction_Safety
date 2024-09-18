@@ -18,6 +18,16 @@
             margin-bottom: 40px;
             color: #333;
         }
+        .intro-text {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: justify;
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6em;
+            margin-bottom: 40px;
+            padding: 0 15px;
+        }
         .container {
             display: flex;
             justify-content: space-between;
@@ -91,10 +101,57 @@
             margin-bottom: 20px;
             color: #555;
         }
+        .survey-links {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .survey-links a {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 15px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .survey-links a:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
     <h1>Construction Safety Project</h1>
+
+    <div class="intro-text">
+        It is a well known fact, how hazardous and unsafe the construction industry is, with
+        a construction worker losing their life every 96 minutes. As the second most fatal occu-
+        pation, one naturally questions what underlying factors drive such a high fatality rate.
+        According to key findings from the Bureau of Labor Statistics (BLS), falls, slips, and trips
+        are the leading causes of fatalities in construction. Over the past decade, much has been
+        done in terms of hazard identification and safety inspections. However, one essential el-
+        ement that cannot be overlooked is the feedback from the workers themselves. Studies
+        revolving workers often emphasize the need for more visual aids and more engaging con-
+        tent in safety training sessions. Studies consistently show that an effective safety record
+        is closely tied to training that motivates workers- overcoming the limitations of passive
+        learning, and counters distractions that reduce retention. Additionally, it is important to
+        consider the diversity of the workforce. A significant portion of construction workers are
+        foreign-born, many of whom have limited proficiency in English. For them, visual learning
+        plays a critical role in understanding and retaining safety practices. This paper introduces
+        a novel Augmented Reality (AR) application, created to address these needs by offering
+        continuous training and hazard detection. The AR application projects the leading cause
+        of fatal hazards such as falls, trips, falling objects, as well as electrocution — into real-
+        world construction environments, allowing workers to engage in dangerous situations in a
+        controlled setting. To evaluate the impact of AR-based training, a comparative survey was
+        conducted, that compares the AR training with traditional safety training measures partic-
+        ularly reading and video-based learning methods. The survey focused on two key metrics
+        - knowledge retention and hazard proximity awareness. The results clearly demonstrate
+        that the AR application significantly improves workers’ ability to recognize and respond to
+        the most common fatal hazards, ultimately enhancing their overall hazard awareness and
+        preparedness.
+    </div>
 
     <div class="container">
         <!-- Reading Section -->
@@ -146,7 +203,13 @@
                 </div>
             </div>
         </div>
-
     </div>
+
+    <!-- Pre and Post Survey Links at the Bottom -->
+    <div class="survey-links">
+        <a href="https://forms.gle/y6C9EBha7M5mbD578" target="_blank">Pre Survey</a>
+        <a href="https://forms.gle/Dx2F2DfGbYRHLXYY7" target="_blank">Post Survey</a>
+    </div>
+
 </body>
 </html>
